@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="TIP.CSS" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h2> <b> Tip Calculator </b> </h2>
+            <p style="margin-bottom: 20px;"> Enter the Bill amount and choose a tip percentage. </p>
+            <div class="bill-amount">
+                <div class="form1">
+                    <p style="margin-right: 10px;">Bill Amount: </p>
+                    <input type="text" placeholder="Enter the bill amount" id="billamount">
+                </div>
+            </div>
+            <div class="tip-percent">
+                <div class="options">
+                    <button onclick="tipOptions()" id="predetermined"> Pre-Determined</button>
+                    <button onclick="customTip()" id="custom"> Custom </button>
+                </div>
+                <div class="predetermined">
+                    <button id="btn1" onclick="tenPercentTip()">10%</button>
+                    <button id="btn2" onclick="fifteenPercentTip()">15%</button>
+                    <button id="btn3" onclick="twentyPercentTip()">20%</button>
+                </div>
+                <div class="customtip">
+                    <input type="text" placeholder="Enter tip percentage" id="tippercent" style="margin-bottom: 20px;">
+                    <button onclick="calculateCustomTip()"> Calculate Tip </button>
+                </div>
+            </div>
+            <p id="final"></p>
+        </div>
+    </div>
+    <script src="TIP.JS"></script>
+</body>
+</html>
